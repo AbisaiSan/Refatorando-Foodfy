@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/styles.css">
+  {%block head%}
+  <title>Foodfy</title>
+  {%endblock%}
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="links">
+        <a href="/" class="logo"><img src="assets/logo.png" alt="logo"></a>
+        <a href="sobre">Sobre</a>
+        <a href="receitas">Receitas</a>
+      </div>
+    </header>
+
+    {% block content%}
+  {% endblock%}
+  </div>
+
+  
+  <footer>
+    <a href="https://github.com/AbisaiSan" target="_blank"> 
+    <h2>Desenvolvido por <span>Abisai Santos</span></h2>
+  </a>
+  </footer>
+</body>
+
+</html>
