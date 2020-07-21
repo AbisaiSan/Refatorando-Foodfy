@@ -13,7 +13,7 @@ server.set('view engine', 'njk')
 
 nunjucks.configure('views', {
   express:server,
-  noCache:true
+  noCache:true,
 })
 
 //Criando as rotas
@@ -21,16 +21,30 @@ nunjucks.configure('views', {
 
 server.get("/", function(req, res){
 
-  return res.render("index")
+  return res.render("home")
 })
 
-server.get("/sobre", function(req, res) {
-  return res.render("sobre")
+server.get("/about", function(req, res) {
+  return res.render("about")
 })
 
 server.get("/receitas", function(req, res){ 
   return res.render("receitas")
 })
+server.get("/recipe", function(req, res){ 
+  return res.render("recipe")
+})
+
+
+/*Recipe
+
+server.get("/recipes/:index", function (req, res) {
+  const recipes = [...]; // Array de receitas carregadas do data.js
+  const recipeIndex = req.params.index;
+
+  console.log(receipts[recipeIndex]);
+})
+*/
 server.listen(5000,function(){
   console.log('Server is running')
 })
