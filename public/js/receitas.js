@@ -1,25 +1,16 @@
-const modalOverlay = document.querySelector('.modaloverlay');
-const cards = document.querySelectorAll('.card');
+const esconder = document.querySelectorAll('.esconder');
+const mostrar = document.querySelectorAll('.ingred-receita');
 
 
-for(let card of cards) {
+for(let receita of mostrar) {
 
-  //Setando o atributo a variavel
-  const imgId = card.getAttribute('id');
-  const title = card.querySelector('.nome-prato').innerText // atribui o texto que contém 
-  const author = card.querySelector('.chef').innerText
   
-  card.addEventListener("click", function(){
+  
+  receita.addEventListener("click", function(){
+    
+   
+    esconder.classList.add('display')
 
-    modalOverlay.classList.add('active') 
-
-
-
-    modalOverlay.querySelector("img").src = `/assets/${imgId}.png`
-
-    modalOverlay.querySelector('.descricao-receita').innerHTML = `${title}`
-    modalOverlay.querySelector('.chef-modal').innerHTML = `${author}`
-    console.log('teste')
   })
 }
 

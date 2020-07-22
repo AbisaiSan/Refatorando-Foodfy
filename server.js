@@ -4,7 +4,7 @@ const nunjucks = require('nunjucks')
 
 const server = express()
 
-// const receitas = require('./js/...')
+const receita = require('./public/js/data')
 
 //Configurando o express para arquivos estáticos
 server.use(express.static('public'))
@@ -21,7 +21,7 @@ nunjucks.configure('views', {
 
 server.get("/", function(req, res){
 
-  return res.render("home")
+  return res.render("home", {items:receita})
 })
 
 server.get("/about", function(req, res) {
@@ -29,16 +29,16 @@ server.get("/about", function(req, res) {
 })
 
 server.get("/receitas", function(req, res){ 
-  return res.render("receitas")
+  return res.render("receitas",  {items:receita})
 })
 server.get("/recipe", function(req, res){ 
-  return res.render("recipe")
+  return res.render("recipe", {items:receita})
 })
 
 
 /*Recipe
 
-server.get("/recipes/:index", function (req, res) {
+server.get("/recipe/:index", function (req, res) {
   const recipes = [...]; // Array de receitas carregadas do data.js
   const recipeIndex = req.params.index;
 

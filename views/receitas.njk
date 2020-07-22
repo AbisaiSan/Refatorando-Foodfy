@@ -6,120 +6,28 @@
   
   {%block content%}
     <section id="cards">
+      {%for item in items%}
       <div class="card" id="burger">
-          <img src="./assets/burger.png" alt="">
+          <img src="{{item.image}}" alt="">
           <div class="nome-prato">
-            <h2 class="nome-prato" >Triplo bacon burger</h2>
+            <h2 class="nome-prato" >{{item.title}}</h2>
           </div>
           <div class="chef">
-            <h3 class="chef" >por Jorge Relato</h3>
+            <h3 class="chef" >{{item.author}}</h3>
           </div>
-        </div>
-        <div class="card" id="pizza">
-          <img src="./assets/pizza.png" alt="">
+      </div>
+      {%endfor%}
+      {%for item in items%}
+      <div class="card" id="{{item.id}}">
+          <img src="{{item.image}}" alt="">
           <div class="nome-prato">
-            <h2>Pizza 4 estações</h2>
+            <h2 class="nome-prato" >{{item.title}}</h2>
           </div>
           <div class="chef">
-            <h3>por Fabiana Melo</h3>
+            <h3 class="chef" >{{item.author}}</h3>
           </div>
-        </div>
-        <div class="card" id="espaguete">
-          <img src="./assets/espaguete.png" alt="">
-          <div class="nome-prato">
-            <h2>Espaguete ao alho</h2>
-          </div>
-          <div class="chef">
-            <h3>por Júlia Kinoto</h3>
-          </div>
-        </div>
-        <div class="card" id="lasanha">
-          <img src="./assets/lasanha.png" alt="">
-          <div class="nome-prato">
-            <h2>Lasanha mac n’ cheese</h2>
-          </div>
-          <div class="chef">
-            <h3>por Juliano Vieira</h3>
-          </div>
-        </div>
-        <div class="card" id="doce">
-          <img src="./assets/doce.png" alt="">
-          <div class="nome-prato">
-            <h2>Docinhos pão-do-céu</h2>
-          </div>
-          <div class="chef">
-            <h3>por Ricardo Golvea</h3>
-          </div>
-        </div>
-        <div class="card" id="asinhas">
-          <img src="./assets/asinhas.png" alt="">
-          <div class="nome-prato">
-            <h2>Asinhas de frango ao barbecue</h2>
-          </div>
-          <div class="chef">
-            <h3>por Vania Steroski</h3>
-          </div>
-        </div>
-
-        <div class="card" id="burger">
-          <img src="./assets/burger.png" alt="">
-          <div class="nome-prato">
-            <h2>Triplo bacon burger</h2>
-          </div>
-          <div class="chef">
-            <h3>por Jorge Relato</h3>
-          </div>
-        </div>
-        <div class="card" id="pizza">
-          <img src="./assets/pizza.png" alt="">
-          <div class="nome-prato">
-            <h2>Pizza 4 estações</h2>
-          </div>
-          <div class="chef">
-            <h3>por Fabiana Melo</h3>
-          </div>
-        </div>
-        <div class="card" id="espaguete">
-          <img src="./assets/espaguete.png" alt="">
-          <div class="nome-prato">
-            <h2>Espaguete ao alho</h2>
-          </div>
-          <div class="chef">
-            <h3>por Júlia Kinoto</h3>
-          </div>
-        </div>
-        <div class="card" id="lasanha">
-
-          <img src="./assets/lasanha.png" alt="">
-
-          <div class="nome-prato">
-            <h2>Lasanha mac n’ cheese</h2>
-          </div>
-
-          <div class="chef">
-            <h3>por Juliano Vieira</h3>
-          </div>
-
-        </div>
-        <div class="card" id="doce">
-          <img src="./assets/doce.png" alt="">
-          <div class="nome-prato">
-            <h2 class="nome-prato" >Docinhos pão-do-céu</h2>
-          </div>
-          <div class="chef">
-            <h3>por Ricardo Golvea</h3>
-          </div>
-        </div>
-        <div class="card" id="asinhas">
-          <img src="./assets/asinhas.png" alt="">
-          <div class="nome-prato">
-            <h2>Asinhas de frango ao barbecue</h2>
-          </div>
-          <div class="chef">
-            <h3>por Vania Steroski</h3>
-          </div>
-        </div>
-      
+      </div>
+      {%endfor%}
     </section>
 {%endblock%}
 

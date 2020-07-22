@@ -346,6 +346,13 @@ button{
   color: #444444;
   line-height: 28px;
 }
+
+/*===Esconder e mostrar===*/
+
+.preparo-receita li .display{
+  display:none;
+  transition: 500ms;
+}
 /* DEIXAR FOOTER GRUDADO NO FIM DA PÁGINA */
 
 

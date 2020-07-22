@@ -1,79 +1,38 @@
 {% extends "layout.njk" %}
 
-      {% block content%}
-      <div id="wrapper">
-        <div class="content">
-          <h1>As melhores receitas</h1>
-          <h2>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</h2>
-          </div>
+{% block content%}
+		<div id="wrapper">
+				<div class="content">
+						<h1>As melhores receitas</h1>
+						<h2>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</h2>
+				</div>
 
-          <div class="img-chef">
-          <img src="assets/chef.png" alt="">
-          </div>
-          </div>
+				<div class="img-chef">
+						<img src="assets/chef.png" alt="">
+				</div>
+		</div>
 
-          <div id="acessos">
-          <h1>Mais acessadas</h1>
-          </div>
-          <section id="cards">
-          <div class="card">
-          <img src="./assets/burger.png" alt="">
-          <div class="nome-prato">
-          <h2>Triplo bacon burger</h2>
-          </div>
-          <div class="chef">
-          <h3>por Jorge Relato</h3>
-          </div>
-          </div>
-          <div class="card">
-          <img src="./assets/pizza.png" alt="">
-          <div class="nome-prato">
-          <h2>Pizza 4 estações</h2>
-          </div>
-          <div class="chef">
-          <h3>por Fabiana Melo</h3>
-          </div>
-          </div>
-          <div class="card">
-          <img src="./assets/espaguete.png" alt="">
-          <div class="nome-prato">
-          <h2>Espaguete ao alho</h2>
-          </div>
-          <div class="chef">
-          <h3>por Júlia Kinoto</h3>
-          </div>
-          </div>
-          <div class="card">
-          <img src="./assets/lasanha.png" alt="">
-          <div class="nome-prato">
-          <h2>Lasanha mac n’ cheese</h2>
-          </div>
-          <div class="chef">
-          <h3>por Juliano Vieira</h3>
-          </div>
-          </div>
-          <div class="card">
-          <img src="./assets/doce.png" alt="">
-          <div class="nome-prato">
-          <h2>Docinhos pão-do-céu</h2>
-          </div>
-          <div class="chef">
-          <h3>por Ricardo Golvea</h3>
-          </div>
-          </div>
-          <div class="card">
-          <img src="./assets/asinhas.png" alt="">
-          <div class="nome-prato">
-          <h2>Asinhas de frango ao barbecue</h2>
-          </div>
-          <div class="chef">
-          <h3>por Vania Steroski</h3>
-          </div>
-        </div>
-      </section>
+		<div id="acessos">
+				<h1>Mais acessadas</h1>
+		</div>
 
-      </div>
-      {% endblock%}
+		<section id="cards">
+				{%for item in items%}
+				<div class="card">
+						<img src="{{item.image}}" alt="">
+						<div class="nome-prato">
+								<h2>{{item.title}}</h2>
+						</div>
+						<div class="chef">
+								<h3>{{item.author}}</h3>
+								 
+						</div>
+				</div>
+				{%endfor%}
+		</section>
+
+</div>
+{% endblock%}
 </body>
 
 </html>
