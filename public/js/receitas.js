@@ -1,23 +1,8 @@
-const esconder = document.querySelectorAll('.esconder');
-const mostrar = document.querySelectorAll('.ingred-receita');
+const cards = document.querySelectorAll('.card')
 
-
-for(let receita of mostrar) {
-
-  
-  
-  receita.addEventListener("click", function(){
-    
-   
-    esconder.classList.add('display')
-
-  })
+for (let card of cards) {
+    card.addEventListener('click', function () {
+        const recipeId = card.getAttribute('id')
+        window.location.href = `/recipe/${recipeId}` 
+    })
 }
-
-//Fechando o modal
-const closeModal = document.querySelector('.close-modal')
-
-closeModal.addEventListener("click", function (){
-    modalOverlay.classList.remove('active') // remove classe active p/ fechar modal
-    modalOverlay.querySelector("img").src = ""
-})

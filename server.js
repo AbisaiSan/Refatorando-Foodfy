@@ -31,20 +31,21 @@ server.get("/about", function(req, res) {
 server.get("/receitas", function(req, res){ 
   return res.render("receitas",  {items:receita})
 })
+
 server.get("/recipe", function(req, res){ 
+  return res.render("recipe",  {items:receita})
+})
+
+server.get("/recipe/:id", function (req, res) {
+  const recipes = [...receita]
+  const recipeId = req.params.id
+
+  console.log(receita[recipeId])
+
   return res.render("recipe", {items:receita})
 })
 
 
-/*Recipe
-
-server.get("/recipe/:index", function (req, res) {
-  const recipes = [...]; // Array de receitas carregadas do data.js
-  const recipeIndex = req.params.index;
-
-  console.log(receipts[recipeIndex]);
-})
-*/
 server.listen(5000,function(){
   console.log('Server is running')
 })

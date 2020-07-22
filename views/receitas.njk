@@ -7,7 +7,7 @@
   {%block content%}
     <section id="cards">
       {%for item in items%}
-      <div class="card" id="burger">
+      <div class="card" id="{{item.id}}">
           <img src="{{item.image}}" alt="">
           <div class="nome-prato">
             <h2 class="nome-prato" >{{item.title}}</h2>
