@@ -17,42 +17,7 @@
           </div>
       </div>
       {%endfor%}
-      {%for item in items%}
-      <div class="card" id="{{item.id}}">
-          <img src="{{item.image}}" alt="">
-          <div class="nome-prato">
-            <h2 class="nome-prato" >{{item.title}}</h2>
-          </div>
-          <div class="chef">
-            <h3 class="chef" >{{item.author}}</h3>
-          </div>
-      </div>
-      {%endfor%}
     </section>
+
+    <script src="/js/receitas.js"></script>
 {%endblock%}
-
-  <!--<div class="modaloverlay">
-
-    <div class="modal">
-        <img style="max-width: 700px; 
-        max-height: 300px;
-        margin-top: 30px;
-        margin-bottom: 15px;
-        border-radius: 15px;
-        padding-left: 4.6%;"  class="img-receita"  alt="">
-        <p class = "descricao-receita"></p>
-        <p class = "chef-modal"></p>
-        <div class="close-modal">
-          <h3>Fechar</h3>
-      </div>
-      </div>
-      </div>
-    -->
-  
-
-
-
-  <script src="./js/receitas.js"></script>
-</body>
-
-</html>

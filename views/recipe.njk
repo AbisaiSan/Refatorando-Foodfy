@@ -6,9 +6,9 @@
   {% block content%}
 
     <section>
-     
+     {{receita}}
         <div class="img-main">
-          <img src="assets/burger.png" alt="">
+          <img src="{{items.image}}" alt="">
         </div>
 
         <div class="recipe-title">
@@ -66,6 +66,6 @@
       </div>
     </main>
 
-     <script src="./public/js/receitas.js"></script>
+     <script src="/js/receitas.js"></script>
     
     {% endblock%}
