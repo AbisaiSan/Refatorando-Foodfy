@@ -6,17 +6,17 @@
   {% block content%}
 
     <section>
-     {{receita}}
+     {{item}}
         <div class="img-main">
-          <img src="{{items.image}}" alt="">
+          <img src="{{recipe.image}}" alt="">
         </div>
 
         <div class="recipe-title">
           <div class="recipe-prato">
-            <h2>Triplo bacon burger</h2>
+            <h2>{{recipe.title}}</h2>
           </div>
           <div class="recipe-chef">
-            <h3>por Jorge Relato</h3>
+            <h3>{{recipe.author}}</h3>
           </div>
         </div>
     
@@ -24,45 +24,45 @@
 
     <main>
       	
-          <div class="ingredientes">
+          <div class="recipe-wraper">
             <div class="title-ingred">
               <h2>Ingredientes</h2>
-              <button class="esconder">Esconder</button>
+              <button class="button">Esconder</button>
             </div>
-          {%for item in items%}
-            <div class="ingred-receita">
-              <ul id="ingred-receita">
-                <li >{{item.ingredients}}</li>
+          {%for item in recipe.ingredients%}
+            <div class="show">
+              <ul id="show">
+                <li >{{item}}</li>
               </ul>
             </div>
             {%endfor%}
           </div>
        
-      <div class="preparo">
+      <div class="recipe-wraper">
         <div class="title-preparo">
           <h2>Modo de preparo</h2>
-          <button class="mostrar">Mostrar</button>
+          <button class="button">Mostrar</button>
         </div>
-        {%for item in items%}
-          <div class="preparo-receita">
-            <ul id="preparo-receita">
-              <li>{{item.preparation}}</li>
+        {%for item in recipe.preparation%}
+          <div class="show">
+            <ul id="show ">
+              <li>{{item}}</li>
               
             </ul>
           </div>
         {%endfor%}
       </div>
         
-      <div class="info">
+      <div class="recipe-wraper">
         <div class="title-info">
           <h2>Informações adicionais</h2>
-          <button class="esconder">Esconder</button>
+          <button class="button">Esconder</button>
         </div>
-        {%for item in items%}
+       
           <div id="texto-info">
-           <p>{{item.information}}</p>
+           <p>{{recipe.information}}</p>
           </div>
-        {%endfor%}
+        
       </div>
     </main>
 

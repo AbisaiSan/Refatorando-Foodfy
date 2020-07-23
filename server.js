@@ -28,16 +28,9 @@ server.get("/about", function(req, res) {
   return res.render("about")
 })
 
-server.get("/receitas", function(req, res){ 
-  return res.render("receitas",  {items:receitas})
+server.get("/recipes", function(req, res){ 
+  return res.render("recipes",  {items:receitas})
 })
-
-
-server.get("/recipe", function(req, res){ 
-  return res.render("recipe",  {items:receitas})
-})
-
-
 
 server.get("/recipe/:id", function (req, res) {
   
@@ -45,7 +38,7 @@ server.get("/recipe/:id", function (req, res) {
 
   console.log(recipeId);
 
-  return res.render("recipe", {item : recipeId} )
+  return res.render("recipe", {recipe: receitas[recipeId]} )
 })
 
 

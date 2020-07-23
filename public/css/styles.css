@@ -243,10 +243,13 @@ border-radius: 15px;
 main {
   margin-top: 3%;
 }
-.ingredientes {
+.recipe-wraper {
+  margin-top: 2%;
   align-items: flex-end;
 }
-
+.wraper-content.hidden {
+    display: none;
+}
 .title-ingred {
   display: flex ;
 }
@@ -264,21 +267,18 @@ main {
   color: #999999;
 }
 
-#ingred-receita {
+#show {
   padding-left: 1.5%;
   margin-top: 2%;
 }
-.ingred-receita li{
+.show li{
   font-family: Roboto-Regular;
   font-size: 18px;
   color: #444444;
   line-height: 28px;
 }
 
-.preparo {
-  margin-top: 2%;
-  align-items: flex-end;
-}
+
 
 button{
   color: #999999;
@@ -311,20 +311,14 @@ button{
   color: #999999;
 }
 
-#preparo-receita{
-  padding-left: 1.5%;
-  margin-top: 2%;
-}
-.preparo-receita li{
+.show li{
   font-family: Roboto-Regular;
   font-size: 18px;
   color: #444444;
   line-height: 28px;
 }
 
-.info {
-  margin-top: 2%;
-}
+
 .title-info {
   display: flex ;
 }
@@ -353,6 +347,10 @@ button{
 .preparo-receita li .display{
   display:none;
   transition: 500ms;
+}
+
+.show .sumir{
+  display: none;
 }
 /* DEIXAR FOOTER GRUDADO NO FIM DA PÁGINA */
 
