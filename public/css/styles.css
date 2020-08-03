@@ -352,6 +352,29 @@ button{
 .show .sumir{
   display: none;
 }
+
+/*===PAINEL ADMIN===*/
+.container-admin {
+ 
+ 
+}
+.links-admin {
+  margin: 0;
+  width: 100%;
+  background-color: #111111;
+}
+.links-admin img {
+
+  margin-top: 8px;  
+  padding: 16px;
+}
+
+.cards-admin{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
 /* DEIXAR FOOTER GRUDADO NO FIM DA PÁGINA */
 
 
